@@ -45,6 +45,7 @@
     "Oleh Aleinyk <oleg.aleynik@gmail.com>"
   ],
   "scripts": {
+    "install": "node libvips-install && node-gyp rebuild",
     "clean": "rm -rf node_modules/ build/ vendor/ coverage/ test/fixtures/output.*",
     "test": "semistandard && cc && nyc --reporter=lcov --branches=99 mocha --slow=5000 --timeout=60000 ./test/unit/*.js",
     "coverage": "./test/coverage/report.sh",
@@ -76,6 +77,7 @@
     "color": "^2.0.1",
     "detect-libc": "^1.0.3",
     "nan": "^2.8.0",
+    "npmlog": "^4.1.2",
     "semver": "^5.4.1",
     "simple-get": "^2.7.0",
     "tar": "^4.2.0",
